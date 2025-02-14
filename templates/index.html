@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?wine') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .btn-custom {
+            background: #ff4c4c;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background: #e63e3e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h2 class="text-center">🍷 Wine Quality Prediction 🍷</h2>
+                    <p class="text-center">Enter the details below to predict wine quality!</p>
+
+                    <!-- Form for entering wine features -->
+                    <form action="/predict" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Fixed Acidity:</label>
+                            <input type="text" name="fixed_acidity" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Volatile Acidity:</label>
+                            <input type="text" name="volatile_acidity" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Citric Acid:</label>
+                            <input type="text" name="citric_acid" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Residual Sugar:</label>
+                            <input type="text" name="residual_sugar" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Chlorides:</label>
+                            <input type="text" name="chlorides" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Free Sulfur Dioxide:</label>
+                            <input type="text" name="free_sulfur_dioxide" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Total Sulfur Dioxide:</label>
+                            <input type="text" name="total_sulfur_dioxide" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Density:</label>
+                            <input type="text" name="density" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">pH:</label>
+                            <input type="text" name="pH" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Sulphates:</label>
+                            <input type="text" name="sulphates" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Alcohol:</label>
+                            <input type="text" name="alcohol" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom w-100">🔮 Predict Quality</button>
+                    </form>
+
+                    <hr>
+
+                    <!-- Train Model Button -->
+                    <form action="/train" method="get">
+                        <button type="submit" class="btn btn-secondary w-100">📈 Train Model</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
