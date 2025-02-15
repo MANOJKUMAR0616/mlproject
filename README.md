@@ -51,6 +51,6 @@ pip install -r requirements.txt
     1. AmazonEC2ContainerRegistryFullAccess
     2. AmazonEC2FullAccess
 
-    url: 149536485590.dkr.ecr.ap-south-1.amazonaws.com/mlproject
+    url: 149536485590.dkr.ecr.ap-south-1.amazonaws.com/ml-project
 
 
